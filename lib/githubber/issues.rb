@@ -25,13 +25,13 @@ module Githubber
     #https://github.com/rmcwilliam/githubber/issues/2   
     # PATCH /repos/:owner/:repo/issues/:number
     def close_issue(owner, repo, number)
-      Issues.patch("/repos/#{owner}/#{repo}/issues/#{number}", :headers => @auth) #needs auth
+      Issues.patch("/repos/#{owner}/#{repo}/issues/#{number}",:headers => @auth) #needs auth
     end
   end 
 end
 
 
-# api = Issues.new("7df3a5d15fa6a42fef0bb325328cfc773f408dde")
+# api = Issues.new(access token)
 # binding.pry
 # api.make_comment("rmcwilliam", "githubber", 2,"blah blah")
 

@@ -2,13 +2,7 @@ require "httparty"
 require "pry"
 
 require "githubber/version"
-
 require "githubber/issues"
-
-# require "githubber/pull_requests"
-
-
-
 require "githubber/pull_requests"
 
 
@@ -21,9 +15,9 @@ end
 
 
 
-# api = Issues.new("7df3a5d15fa6a42fef0bb325328cfc773f408dde")
+# api = Issues.new(access token)
 # binding.pry
-# api.make_comment("rmcwilliam", "githubber", 2,"blah blah")
-
+# api.close_issue("rmcwilliam", "githubber", 2)
+# api.make_comment("rmcwilliam", "githubber", 1,"blah blah")
 
 
