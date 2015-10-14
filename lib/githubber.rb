@@ -17,7 +17,7 @@ end
 
 # api = Issues.new(access token)
 # binding.pry
-# api.close_issue("rmcwilliam", "githubber", 2)
+# api.close_issue("rmcwilliam", "githubber", 2, "state":"closed")
 # api.make_comment("rmcwilliam", "githubber", 1,"blah blah")
 
 

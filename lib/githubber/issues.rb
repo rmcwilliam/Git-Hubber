@@ -10,7 +10,7 @@ module Githubber
       }
     end
 
-# POST /repos/:owner/:repo/issues/:number/comments :body => options.to_json
+# POST /repos/:owner/:repo/issues/:number/comments 
 # https://github.com/rmcwilliam/githubber/issues/2
 
     def make_comment(owner, repo, number, comment)
@@ -23,9 +23,9 @@ module Githubber
     end
    
     #https://github.com/rmcwilliam/githubber/issues/2   
-    # PATCH /repos/:owner/:repo/issues/:number
-    def close_issue(owner, repo, number)
-      Issues.patch("/repos/#{owner}/#{repo}/issues/#{number}",:headers => @auth) #needs auth
+    # PATCH /repos/:owner/:repo/issues/:number                # api.close_issue("rmcwilliam", "githubber", 1, "state":"closed")
+    def close_issue(owner, repo, number, options={})
+      Issues.patch("/repos/#{owner}/#{repo}/issues/#{number}",:headers => @auth, :body => options.to_json) #needs auth
     end
   end 
 end
