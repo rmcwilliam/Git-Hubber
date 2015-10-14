@@ -1,6 +1,7 @@
 require "httparty"
 require "pry"
 
+require "githubber/api_calls"
 require "githubber/version"
 require "githubber/issues"
 require "githubber/pull_requests"

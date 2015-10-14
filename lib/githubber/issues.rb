@@ -15,12 +15,12 @@ module Githubber
 
     def make_comment(owner, repo, number, comment)
       Issues.post("/repos/#{owner}/#{repo}/issues/#{number}/comments",:headers => @auth,:body => {"body" => comment}.to_json) ## needs auth!!! Thats why wasn't working!
-    end
+    end   
 
     # GET /repos/:owner/:repo/issues
     def list_issues(owner, repo)
       Issues.get("/repos/#{owner}/#{repo}/issues", :headers => @auth) # authentication up's rate/limit here but not necessary
-    end
+    end   # could set the reulsts of this equal to a variable. results = api.list_issues()
    
     #https://github.com/rmcwilliam/githubber/issues/2   
     # PATCH /repos/:owner/:repo/issues/:number                # api.close_issue("rmcwilliam", "githubber", 1, "state":"closed")
